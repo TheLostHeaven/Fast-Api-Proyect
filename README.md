@@ -62,9 +62,12 @@ http://localhost:8000/docs
 
 3. Prueba las diferentes rutas disponibles para realizar operaciones CRUD en las películas.
 
-
 ## Contacto
 
-Si tienes alguna pregunta o sugerencia o quieres el workbook para desarrollar este proyecto, no dudes en contactarme en [jsanchez@educamas.com.co](jsanchez@educamas.com.co).
+Si tienes alguna pregunta o sugerencia o quieres el workbook para desarrollar este proyecto, no dudes en contactarme en 
+## Autors
+
+- [@TheLostHeaven](https://github.com/TheLostHeaven)
+
 
 
