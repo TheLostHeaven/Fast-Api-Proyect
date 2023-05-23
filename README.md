@@ -24,7 +24,7 @@ Este proyecto es un ejemplo de una API RESTful desarrollada con FastAPI que perm
 
 1. Clona este repositorio en tu máquina local:
 
-git clone git@github.com:JSand89/my-movie-app-c9.git
+git clone https://github.com/TheLostHeaven/Fast-Api-Proyect.git
 
 
 2. Navega al directorio del proyecto:
@@ -68,6 +68,8 @@ Si tienes alguna pregunta o sugerencia o quieres el workbook para desarrollar es
 ## Autors
 
 - [@TheLostHeaven](https://github.com/TheLostHeaven)
-
-
-
+- [@Gyna Herrera](https://github.com/Gyna0206)
+- [@Julian Gaitan](https://github.com/Pukkki)
+- [@Victor Torres](https://github.com/Victor050106)
+- [@Juan Andres](https://github.com/juan0941)
+- [@TheLostHeaven](https://github.com/TheLostHeaven)
