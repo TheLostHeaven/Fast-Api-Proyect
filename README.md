@@ -1,6 +1,6 @@
 # Proyecto de CRUD de Películas - FastAPI
 
-<!-- <img src="img/programate-academy.png" alt="Logo Programate"> -->
+<img src="img/programate-academy.png" alt="Logo Programate">
 
 ![Logo](https://www.python.org/static/community_logos/python-logo-inkscape.svg)
 
@@ -47,7 +47,7 @@ git remote add origin <nueva_url_del_repositorio>
 
 4. Ahora, tus compañeros deben clonar tu repositorio y tú debes darles permiso para editarlo
 
-Desde el repositorio en GitHub, ve a "Settings" y luego a la sección de "Collaborators" para agregarlos. Esto tiene como objetivo permitirles realizar cambios. No te preocupes, realizaremos este proceso en clase."
+Desde el repositorio en GitHub, ve a "Settings" y luego a la sección de "Collaborators" para agregarlos. Esto tiene como objetivo permitirles realizar cambios.
 
 5. Instala las dependencias necesarias:
 
@@ -70,12 +70,13 @@ http://localhost:8000/docs
 
 ## Contacto
 
-Si tienes alguna pregunta o sugerencia o quieres el workbook para desarrollar este proyecto, no dudes en contactarme en 
+Si tienes alguna pregunta o sugerencia o quieres el workbook para desarrollar este proyecto, no dudes en contactarme en: tiquedaniel2002@gmail.com
+
 ## Autors
 
-- [@TheLostHeaven](https://github.com/TheLostHeaven)
+- [@Daniel Molina](https://github.com/TheLostHeaven)
 - [@Gyna Herrera](https://github.com/Gyna0206)
 - [@Julian Gaitan](https://github.com/Pukkki)
 - [@Victor Torres](https://github.com/Victor050106)
 - [@Juan Andres](https://github.com/juan0941)
-- [@TheLostHeaven](https://github.com/TheLostHeaven)
+- [@David Lagos](https://github.com/andres1david)
