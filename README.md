@@ -1,6 +1,12 @@
 # Proyecto de CRUD de Películas - FastAPI
 
-<img src="img/programate-academy.png" alt="Logo Programate">
+<!-- <img src="img/programate-academy.png" alt="Logo Programate"> -->
+
+![Logo](https://www.python.org/static/community_logos/python-logo-inkscape.svg)
+
+<img src="img/logo-teal.png" alt="Logo de FastApi">
+
+<img src="img/OIP.ktYu1YG5yHsi70F2CL39PwHaCI.png" alt="PyPantic">
 
 ## Descripción
 
