@@ -6,7 +6,7 @@ class rating(BaseModel):
     movie_id: Optional[int] = None
     rev_id: Optional[int] = None
     rev_stars: int = Field(max_length=10,min_length=1)
-    num_o_rating: int = Field(max_length=100.min_length=1)
+    num_o_rating: int = Field(max_length=100,min_length=1)
 
     class config:
         shema_extra = {
