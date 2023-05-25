@@ -10,7 +10,7 @@ class MovieGenres(BaseModel):
     class Config:
         schema_extra = {
             "example":{
-            "gen_id":2,
-            "movie_id":3
+                "gen_id":2,
+                "movie_id":3
             }
         }
