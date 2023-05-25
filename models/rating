@@ -8,6 +8,6 @@ class rating(Base):
 
     id = column(Integer, primary_Key=True)
     movie_id = column(Integer, ForeignKey("movie.id"))
-    rev_id = column(Integer, ForeignKey("rev.id"))
-    rev_stars = column(Integer("rev_stars"))
-    num_o_ratings = column(Integer("num_o_ratings"))
+    rev_id = column(Integer, ForeignKey("reviewers.id"))
+    rev_stars = column(Integer)
+    num_o_ratings = column(Integer)
