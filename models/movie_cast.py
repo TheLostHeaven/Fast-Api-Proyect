@@ -1,7 +1,6 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
-
 from config.database import Base
-
+from sqlalchemy.orm import relationship
 
 class movie_cast(Base):
 
@@ -10,5 +9,5 @@ class movie_cast(Base):
     mov_id = Column(Integer, ForeignKey("movie.id"))
     role = Column(String) 
 
-
+    actor = relationship("Actor", back_populates="movie_cast")
 
