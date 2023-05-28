@@ -24,5 +24,7 @@ def get_genres(genres_id: int):
     genre = genrens_router.get_genre(genres_id)
     return genre
 
-
 # para el genres delete debemos verificar que el id existe y despues ese genero lo eliminamos
+@genrens_router.detele('/genres/{genres_id}', tags=['genres'], status_code=204)
+def detele_genre_by_id(genres_id: int):
+    return JSONResponse (content= {"message": f"Genero con ID {genres_id} Elimiado correctamente"})

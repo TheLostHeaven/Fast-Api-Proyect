@@ -11,5 +11,4 @@ class Actor(Base):
     act_lname = Column(String)
     act_gender = Column(String)
 
-    movie_cast = relationship("MovieCast", back_populates = "actors")
-
+    movie_cast = relationship("Movie_cast", back_populates = "actors")
