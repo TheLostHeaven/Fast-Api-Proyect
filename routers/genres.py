@@ -45,3 +45,23 @@ def get_genres_id(genres:Genres):
 # @genrens_router.detele('/genres/{genres_id}', tags=['genres'], status_code=204)
 # def detele_genre_by_id(genres_id: int):
 #     return JSONResponse (content= {"message": f"Genero con ID {genres_id} Elimiado correctamente"})
+
+#Put
+@genres_router.put('/genres{id}', tags=['genres'])
+def update_genres(id:int,data:Genres):
+    db = Session()
+    result = GenresService(db).get_for_id(id)
+    if not result:
+        return JSONResponse(content={"message" : "genres don´t found", "status code":404})
+    GenresService(db).update_genres(data)
+    return JSONResponse(content={"message": "genre update successfully", "status_code": 202}, status_code=202)
+
+#Detele
+@genres_router.delete('/genres{id}', tags=['genres'])
+def delete_genres(id:int):
+    db = Session()
+    result = GenresService(db).get_for_id(id)
+    if not result:
+        return JSONResponse(content={"message" : "genres don´t found", "status code":404})
+    GenresService(db).delete_genres(id)
+    return JSONResponse(content={"message": "genre delete successfully", "status_code": 200}, status_code=200)
