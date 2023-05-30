@@ -4,7 +4,7 @@ from config.database import Base
 
 class Director(Base):
 
-    __tablename="director"
+    __tablename__="director"
 
     id = Column(Integer, primary_key=True)
     dir_fname = Column(String)
