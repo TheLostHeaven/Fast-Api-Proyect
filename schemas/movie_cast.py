@@ -11,8 +11,7 @@ class Movie_cast(BaseModel):
       schema_extra = { 
                 "example": { 
                     "id": 1, 
-                    "act_id": 2, 
-                    "mov_id": 3, 
+                    "mov_id": 1, 
                     "role": "director" 
                 } 
       }

@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from fastapi.responses import HTMLResponse, JSONResponse
-
+from fastapi.encoders import jsonable_encoder
 
 
 from service.reviewer import ReviewerService
@@ -16,6 +16,8 @@ def reviewer_router():
 
 @reviewer_router.get("/reviewer",tags=["reviewer"],status_code=200)
 def reviewer_router(id:int):
+    db = Session()
+    result = ReviewerService(db).get_for_id(id)
     return JSONResponse(content={"message":"genre created successfully"})
 
 

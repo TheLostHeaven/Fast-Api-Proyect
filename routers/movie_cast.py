@@ -3,8 +3,7 @@ from fastapi.responses import  JSONResponse
 from fastapi.encoders import jsonable_encoder
 
 from config.database import Session
-from models.movie_cast import Movie_cast as Movie_castModel
-from service.movie_cast import Movie_castService
+from service.movie_cast import MovieCast as Movie_castService
 from schemas.movie_cast import Movie_cast
 
 

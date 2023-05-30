@@ -10,6 +10,8 @@ from routers.genres import genres_router
 from routers.director import director_router 
 from routers.actor import actor_router
 from routers.movie_cast import movie_cast_router
+# from routers.reviewer import reviewer_router
+
 
 
 app = FastAPI()
@@ -22,6 +24,8 @@ app.include_router(genres_router)
 app.include_router(director_router)
 app.include_router(actor_router)
 app.include_router(movie_cast_router)
+# app.include_router(reviewer_router)
+
 
 
 Base.metadata.create_all(bind=engine)
