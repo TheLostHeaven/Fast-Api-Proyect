@@ -1,8 +1,8 @@
 from pydantic import BaseModel, Field
-from typing import Opcional 
+from typing import Optional 
 
-class Genres(BaseModel):
-    id : Opcional[int] = None
+class Director(BaseModel):
+    id : Optional[int] = None
     dir_fname : str = Field(max_length=15, min_length=3, description="Nombre director")
     dir_lname : str = Field(max_length=15, min_lenth=3, description="Apellido del director")
 
