@@ -5,7 +5,7 @@ class Actor(Base):
 
     __tablename__ ="actor"
 
-    act_id = Column(Integer, primary_key = True)
+    id = Column(Integer, primary_key = True)
     act_fname = Column(String)
     act_lname = Column(String)
     act_gender = Column(String)
