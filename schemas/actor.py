@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import Opcional 
+from typing import Opcional
 
 class Actor(BaseModel):
     id : Opcional[int] = None
