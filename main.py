@@ -8,6 +8,7 @@ from middlewares.error_handler import Errorhandler
 from routers.movie import movie_router
 from routers.genres import genres_router
 from routers.director import director_router
+from routers.actor import actor_router
 
 
 
@@ -19,6 +20,7 @@ app.add_middleware(Errorhandler)
 app.include_router(movie_router)
 app.include_router(genres_router)
 app.include_router(director_router)
+app.include_router(actor_router)
 
 
 

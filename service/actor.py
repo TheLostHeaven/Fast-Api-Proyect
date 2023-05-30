@@ -1,5 +1,5 @@
 from models.actor import Actor as ActorModel
-# from schemas.actor import Actor
+from schemas.actor import Actor
 
 class ActorService():
     def __init__(self,db):
@@ -21,9 +21,10 @@ class ActorService():
 
 
     def get_for_id(self, id:int):
-        result = self.db.query(ActorModel).filter(ActorModel.id == id).first()
+        result = self.db.query(ActorModel).filter(ActorModel.id==id).first()
         return result
-    
+
+
     def update_actor(self,data:ActorModel):
         actor = self.db.query(ActorModel).filter(ActorModel.id == data.id).first()
         actor.act_fname = data.act_fname
@@ -32,6 +33,7 @@ class ActorService():
         self.db.commit()        
         return  
 
-    def delete_genre(self,id:int):
-        self.db.query(ActorModel). filter(ActorModel.id == id). delete()
-        self.db.commit() 
+    def delete_actor(self,id:int):
+        self.db.query(ActorModel). filter(ActorModel.id == id).delete()
+        self.db.commit()
+        return
