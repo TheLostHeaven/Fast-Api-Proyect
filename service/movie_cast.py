@@ -11,8 +11,9 @@ class MovieCast():
     
     def create_movie_cast(self, movie_cast:Movie_castModel):
         new_movie_cast = Movie_castModel(
-            
-            mov_id = movie_cast.mov_id,
+            id = movie_cast.id
+            actor_id = movie_cast.actor_id,
+            movie_id = movie_cast.movie_id,
             role = movie_cast.role.upper()      
         )
         self.db.add(new_movie_cast)
