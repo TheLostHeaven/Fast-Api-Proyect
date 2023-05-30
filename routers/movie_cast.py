@@ -38,12 +38,12 @@ def update_movie_cast(id:int, data:Movie_cast):
     return JSONResponse(content={"message":"movie_cast updated succesfully", "status_code":200}, status_code=200)
 
 @movie_cast_router.delete("/Movie_cast{id}", tags=["Movie_cast"])
-def delete_movie_cast(id:int, data:Movie_cast):
+def delete_movie_cast(id:int):
     db=Session()
     result=Movie_castService(db).get_for_id(id)
     if not result:
         return JSONResponse(content= {"message":"movie_cast don't gound", "status_code":404})
-    Movie_castService(db).delete_movie_cast(data)
+    Movie_castService(db).delete_movie_cast(id)
     return JSONResponse(content={"message":"movie_cast delete succesfully", "status_code":200}, status_code=200)
 
     
