@@ -1,5 +1,4 @@
 from sqlalchemy import Column, Integer, ForeignKey
-
 from config.database import Base
 from sqlalchemy.orm import relationship
 
@@ -14,3 +13,5 @@ class MovieDirection(Base):
 
     director=relationship("Director",back_populates="moviedirection")
     movie=relationship("Movie",back_populates="moviedirection")
+  
+    
