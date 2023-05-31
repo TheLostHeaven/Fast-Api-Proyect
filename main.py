@@ -26,7 +26,7 @@ app.include_router(genres_router)
 app.include_router(director_router)
 app.include_router(actor_router)
 # app.include_router(movie_cast_router)
-# app.include_router(rating_router)
+app.include_router(rating_router)
 # app.include_router(reviewer_router)
 app.include_router(movie_direction_router)
 
