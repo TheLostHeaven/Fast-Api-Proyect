@@ -37,10 +37,10 @@ def update_actor(id:int,data:Actor):
     return JSONResponse(content={"message":"actor updated succesfully", "status_code":200}, status_code=200)
 
 @actor_router.delete('/actor{id}',tags=['actor'])
-def delete_actor(id:int):
+def delete_actor(id:int, data:Actor):
     db = Session()
     result = ActorService(db).get_for_id(id)
     if not result:
         return JSONResponse(content= {"message":"actor don't found", "status_code":404})
-    ActorService(db).update_actor(id)
+    ActorService(db).update_actor(data)
     return JSONResponse(content={"message":"actor delete succesfully", "status_code":200}, status_code=200)
