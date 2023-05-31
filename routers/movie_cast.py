@@ -46,4 +46,6 @@ def delete_movie_cast(id:int):
     Movie_castService(db).delete_movie_cast(id)
     return JSONResponse(content={"message":"movie_cast delete succesfully", "status_code":200}, status_code=200)
 
+
+
     
