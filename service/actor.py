@@ -41,9 +41,3 @@ class ActorService():
             return {"message": "Actor deleted successfully"}
         else:
             return {"message": "Actor not found"}
-
-
-
-        # self.db.query(ActorModel). filter(ActorModel.id == id).delete()
-        # self.db.commit()
-        # return
