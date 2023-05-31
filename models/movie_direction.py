@@ -2,11 +2,16 @@ from sqlalchemy import Column, Integer, ForeignKey
 from config.database import Base
 from sqlalchemy.orm import relationship
 
-class movie_direction(Base):
+class MovieDirection(Base):
 
-    __tablename = "movie_direction"
-    dir_id = Column(Integer, ForeignKey ("dir.id") )
-    mov_id = Column(Integer, ForeignKey("mov.id"))
+    __tablename__ ="moviedirection"
 
+
+    id = Column(Integer, primary_key=True)
+    dir_id = Column(Integer,ForeignKey("director.id"))
+    mov_id = Column(Integer, ForeignKey("movie.id"))
+
+    director=relationship("Director",back_populates="moviedirection")
+    movie=relationship("Movie",back_populates="moviedirection")
   
     
