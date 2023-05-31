@@ -1,4 +1,4 @@
-from sqlalchemy import column, ForeignKey, Integer
+from sqlalchemy import Column, ForeignKey, Integer
 
 from config.database import Base
 
@@ -6,8 +6,8 @@ from config.database import Base
 class rating(Base):
     __tablename__ = "rating"
 
-    id = column(Integer, primary_Key=True)
-    movie_id = column(Integer, ForeignKey("movie.id"))
-    rev_id = column(Integer, ForeignKey("reviewers.id"))
-    rev_stars = column(Integer)
-    num_o_ratings = column(Integer)
+    id = Column(Integer, primary_Key=True)
+    movie_id = Column(Integer, ForeignKey("movie.id"))
+    rev_id = Column(Integer, ForeignKey("reviewers.id"))
+    rev_stars = Column(Integer)
+    num_o_ratings = Column(Integer)
