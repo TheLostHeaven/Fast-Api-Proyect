@@ -26,6 +26,7 @@ class MovieService():
         year = movie.year,
         time = movie.time,
         date_release = movie.date_release,
+        movie_cast_id = movie.movie_cast_id, 
         release_contry = movie.release_contry
         )
         self.db.add(new_movie)
