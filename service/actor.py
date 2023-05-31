@@ -34,7 +34,11 @@ class ActorService():
         self.db.commit()        
         return  
 
-    def delete_actor(self,id:int):
-        self.db.query(ActorModel). filter(ActorModel.id == id).delete()
-        self.db.commit()
-        return
+    def delete_actor(self,actor_id:int):
+        actor = self.db.query(ActorModel).get(actor_id)
+        if actor:
+            self.db.delete(actor)
+            self.db.commit()
+            return {"message": "Actor deleted successfully"}
+        else:
+            return {"message": "Actor not found"}
