@@ -1,3 +1,5 @@
+from sqlalchemy import Column, ForeignKey, Integer
+
 from sqlalchemy import Column, ForeignKey, Integer, Float
 from config.database import Base
 
