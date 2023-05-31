@@ -11,8 +11,8 @@ class DirectorService():
     
     def create_director(self,director:DirectorModel):
          new_director = DirectorModel(
-             dir_fname = director.dir_fname.upper()
-             ##dir_lname = director.dir_lname.upper()
+             dir_fname = director.dir_fname,
+             dir_lname = director.dir_lname.upper()
          )
          self.db.add(new_director)
          self.db.commit()
