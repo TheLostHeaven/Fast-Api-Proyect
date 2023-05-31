@@ -4,8 +4,8 @@ from config.database import Base
 
 class Reviewers(Base):
 
-    __tablename__ ='reviewers'
+    __tablename__ ="reviewers"
 
-    id = Column(Integer, primary_key = True, index = True)
+    id = Column(Integer, primary_key = True)
     rev_name = Column(String)
 

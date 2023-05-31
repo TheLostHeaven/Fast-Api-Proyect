@@ -1,6 +1,5 @@
 from models.reviewers import Reviewers as ReviewersModel
-from schemas.reviewers import Reviewers
-
+from schemas.reviewers import Reviewers as ReviewerSchemas
 class ReviewerService():
     def __init__(self, db) -> None:
         self.db = db
@@ -21,13 +20,9 @@ class ReviewerService():
     def get_for_id(self, id:int):  
         result = self.db.query(ReviewersModel).filter(ReviewersModel.id==id).first() 
         return result
-    
-    # def update_reviewer(self,data:Reviewers):
-    #     reviewer = self.db.query(ReviewersModel).filter(ReviewersModel.id == data.id).first()
-    #     reviewer.rev_name = data.rev_name
-    #     self.db.commit()
-    #     return
-    def update_reviewer(self,data:ReviewersModel):
+   
+   
+    def update_reviewer(self,data):
         reviewer = self.db.query(ReviewersModel).filter(ReviewersModel.id == data.id).first()
         reviewer.rev_name = data.rev_name
         self.db.commit() 
