@@ -30,23 +30,15 @@ def get_reviewer_for_id(id:int):
     return JSONResponse (content=jsonable_encoder(result), status_code=200)
 
 
-# @reviewer_router.put('/reviewer{id}', tags=['reviewer'])
-# def update_reviewer(id:int,data:Reviewers):
-#     db = Session()
-#     result = ReviewerService(db).get_for_id(id)
-#     if not result:
-#         return JSONResponse(content= {"message" : "reviewer don't found", "status_code":404})
-#     ReviewerService(db).update_reviewer(data)
-#     return JSONResponse(content={"message":"reviewer updated succesfully", "status_code":200}, status_code=200)
 
 @reviewer_router.put('/reviewer{id}', tags=['reviewer'])
-def update_reviewer(id:int,data:Reviewers):
+def update_reviewer(id:int,reviewer:Reviewers):
     db = Session()
     result = ReviewerService(db).get_for_id(id)
     if not result:
         return JSONResponse(content= {"message" : "reviewer don't found", "status_code":404})
-    ReviewerService(db).update_reviewer(data)
-    return JSONResponse(content={"message":"reviewer updated succesfully", "status_code":200}, status_code=200)
+    ReviewerService(db).update_reviewer(reviewer)
+    return JSONResponse(content={"message":"reviewer updated succesfully", "status_code":202}, status_code=202)
 
 @reviewer_router.delete("/reviewer{id}",tags = ["reviewer"])
 def delete_reviewer(id:int):

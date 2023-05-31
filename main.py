@@ -11,8 +11,8 @@ from routers.director import director_router
 from routers.actor import actor_router
 from routers.movie_cast import movie_cast_router
 #from routers.rating import rating_router
-# from routers.reviewer import reviewer_router
-from routers.movie_direction import movie_direction_router
+from routers.reviewer import reviewer_router
+# from routers.movie_direction import movie_direction_router
 
 
 
@@ -27,8 +27,8 @@ app.include_router(director_router)
 app.include_router(actor_router)
 # app.include_router(movie_cast_router)
 # app.include_router(rating_router)
-# app.include_router(reviewer_router)
-app.include_router(movie_direction_router)
+app.include_router(reviewer_router)
+# app.include_router(movie_direction_router)
 
 
 Base.metadata.create_all(bind=engine)
