@@ -1,12 +1,12 @@
 from pydantic import BaseModel, Field
 from typing import Optional
 
-class rating(BaseModel):
+class Rating(BaseModel):
     id: Optional[int] = None
     movie_id: Optional[int] = None
     rev_id: Optional[int] = None
-    rev_stars: int = Field(max_length=10,min_length=1)
-    num_o_rating: int = Field(max_length=100,min_length=1)
+    rev_stars: float = Field(ge=1,le=10)
+    num_o_rating: int = Field(ge=1)
 
     class config:
         shema_extra = {

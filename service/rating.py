@@ -1,19 +1,19 @@
-from models.rating import rating as ratingModel
-from schemas.rating import rating
+from models.rating import Rating as RatingModel
+#from schemas.rating import Rating
 
-class ratingService():
-    def init(self, db) :
+class RatingService():
+    def __init__(self, db) :
         self.db = db
 
     def get_rating(self):
-        result = self.db.query(ratingModel).all()
+        result = self.db.query(RatingModel).all()
         return result
     
-    def create_rating(self,rating:ratingModel):
-        new_rating = ratingModel(
+    def create_rating(self,rating:RatingModel):
+        new_rating = RatingModel(
             mov_id = rating.movie_id,
             rev_id = rating.rev_id,
-            rev_star = rating.rev_stars,
+            rev_stars = rating.rev_stars,
             num_o_ratings = rating.num_o_ratings.upper()
         )
         self.db.add(new_rating)
@@ -21,19 +21,20 @@ class ratingService():
         return
     
     def get_for_id(self,id:int):
-        result = self.db.query(ratingModel).filter(ratingModel.id == id).first()
+        result = self.db.query(RatingModel).filter(RatingModel.id == id).first()
         return result
     
-    def update_rating(self,data:rating):
-        rating = self.db.query(ratingModel).filter(ratingModel.id == data.id).first()
-        rating.mov_id=data.movie_id
+    def update_rating(self,data:RatingModel):
+        rating = self.db.query(RatingModel).filter(RatingModel.id == data.id).first()
+        rating.movie_id=data.movie_id
         rating.rev_id=data.rev_id
-        rating.rev_star=data.rev_stars
-        rating.num_o_ratings=data.num_o_rating
+        rating.rev_stars=data.rev_stars
+        rating.num_o_ratings=data.num_o_ratings
         self.db.commit()
         return
     
     def delete_rating(self,id:int):
-        self.db.query(ratingModel).filter(ratingModel.id == id).delete()
+        self.db.query(RatingModel).filter(RatingModel.id == id).delete()
         self.db.commit()
         return
+    
