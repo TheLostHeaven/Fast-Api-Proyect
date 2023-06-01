@@ -25,8 +25,8 @@ class MovieDirectionService():
     
     def update_moviedirection(self,data:MovieDirection):
          moviedirection = self.db.query(MovieDirectionModel).filter(MovieDirectionModel.id==data.id).first()
-         moviedirection.dir_id=data.dir_id
-         moviedirection.mov_id=data.mov_id
+         moviedirection.dir_id = data.dir_id
+         moviedirection.mov_id = data.mov_id
          self.db.commit()
          return
     

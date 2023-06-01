@@ -2,7 +2,7 @@ from models.rating import Rating as RatingModel
 from schemas.rating import Rating
 
 class RatingService():
-    def init(self, db) :
+    def __init__(self, db) :
         self.db = db
 
     def get_rating(self):

@@ -12,7 +12,9 @@ rating_router = APIRouter()
 
 @rating_router.get('/rating', tags=['rating'], status_code=200)
 def get_router():
-    return JSONResponse(content={"message":"rating created successfully"})
+    db = Session()
+    result = RatingService(db).get_rating()
+    return JSONResponse(content=jsonable_encoder(result), status_code=200)
 
 @rating_router.post('/rating', tags=['rating'], status_code=201)
 def create_rating(rating:Rating):
@@ -21,10 +23,10 @@ def create_rating(rating:Rating):
     return JSONResponse(content={"message":"rating created successfully", "status_code" : 201})
 
 @rating_router.get('/rating_for_id', tags=['rating'], status_code=200)
-def get_rating_id(rating:Rating):
+def get_rating_id(id: int):
     db = Session()
-    RatingService(db).get_rating(rating)
-    return JSONResponse(content={"message": "rating create successfully", "status_code": 201})
+    result = RatingService(db).get_for_id(id)
+    return JSONResponse(content=jsonable_encoder(result), status_code=200)
 
 @rating_router.put('/rating{id}', tags=['rating'])
 def update_rating(id:int,data:Rating):
