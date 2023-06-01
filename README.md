@@ -79,4 +79,3 @@ Si tienes alguna pregunta o sugerencia o quieres el workbook para desarrollar es
 - [@Julian Gaitan](https://github.com/Pukkki)
 - [@Victor Torres](https://github.com/Victor050106)
 - [@Juan Andres](https://github.com/juan0941)
-- [@David Lagos](https://github.com/andres1david)
