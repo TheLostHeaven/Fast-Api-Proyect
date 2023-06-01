@@ -3,10 +3,10 @@ from sqlalchemy import Column, ForeignKey, Integer
 from config.database import Base
 
 
-class rating(Base):
+class Rating(Base):
     __tablename__ = "rating"
 
-    id = Column(Integer, primary_Key=True)
+    id = Column(Integer, primary_key=True)
     movie_id = Column(Integer, ForeignKey("movie.id"))
     rev_id = Column(Integer, ForeignKey("reviewers.id"))
     rev_stars = Column(Integer)
